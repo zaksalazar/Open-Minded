@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
+    "seed": "node seeds/index.js",
     "prepare": "husky install",
     "lint": "npx eslint \"**/*.js\"",
     "lint:fix": "eslint \"**/*.js\" --fix",
@@ -24,9 +25,15 @@
   "homepage": "https://github.com/zaksalazar/Open-Minded#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
     "handlebars": "^4.7.7",
+    "helpers": "^0.0.6",
     "mysql2": "^2.3.3",
+    "routes": "^2.1.0",
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
