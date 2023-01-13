@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config');
 
 class Question extends Model {}
 
@@ -8,10 +8,10 @@ Question.init(
     question_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true 
+      autoIncrement: true
     },
-    question:{
-      types: DataTypes.TEXT
+    question: {
+      type: DataTypes.TEXT
     }
   },
   {
@@ -24,4 +24,4 @@ Question.init(
   }
 );
 
-module.exports = Question; 
+module.exports = Question;
