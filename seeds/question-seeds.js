@@ -1,14 +1,14 @@
-const { Question } = require('../models');
+const { Category } = require('../models');
 
 const questionData = [
   {
-    question: 'Should America have free healthcare?'
+    question: 'Was the 2020 election stollen?'
   },
   {
-    question: 'Was the 2020 election stollen?'
+    question: 'Should America have free healthcare?'
   }
 ];
 
-const seedQuestions = () => Question.bulkCreate(questionData);
+const seedQuestions = () => Category.bulkCreate(questionData);
 
 module.exports = seedQuestions;

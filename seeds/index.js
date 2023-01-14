@@ -1,5 +1,6 @@
 const seedQuestions = require('./question-seeds');
 
+
 const sequelize = require('../config');
 
 const seedAll = async () => {
