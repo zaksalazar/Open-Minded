@@ -8,7 +8,7 @@ Question.init(
     question_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true 
+      autoIncrement: true
     },
     question:{
       types: DataTypes.TEXT
@@ -24,4 +24,4 @@ Question.init(
   }
 );
 
-module.exports = Question; 
+module.exports = Question;
