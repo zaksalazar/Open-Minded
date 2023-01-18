@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/auth');
 const sequelize = require('./config');
-// const routes = require("./controllers");
+const routes = require('./controllers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -42,10 +42,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //apply routing middleware
-// app.use(routes);
+app.use(routes);
 
-//turn on connection to db and server
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-  sequelize.sync({ force: false });
+sequelize.sync({ force: false }) .then (()=> {
+  app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}!`);
+  });
+
 });
+//turn on connection to db and server

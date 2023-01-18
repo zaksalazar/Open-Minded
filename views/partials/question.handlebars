@@ -1,0 +1,21 @@
+
+
+<div> 
+  <p id='question'> {{question.quesion}} </p>
+</div>
+
+<script> 
+  const topic = fetch ('/questions')
+    method: 'GET'
+    headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        question: document.querySelector('#question').value,
+      })
+    if (response.ok) {
+    //document.location.replace('/dashboard'); 
+  } else {
+    alert('Failed to post');
+  }
+</script>

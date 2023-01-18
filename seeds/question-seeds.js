@@ -2,22 +2,22 @@ const { Question } = require('../models');
 
 const questionData = [
   {
-    question: 'Should America have free healthcare?',
+    topic: 'Should America have free healthcare?'
   },
   {
-    question: 'Was the 2020 election stollen?',
+    topic: 'Was the 2020 election stollen?'
   },
   {
-    question: '',
+    topic: 'Do you believe in God?'
   },
   {
-    question: '',
+    topic: 'Pro vax or no vax?'
   },
   {
-    question: '',
-  },
+    topic: 'Stones or Beatles?'
+  }
 ];
-
+console.log(Question);
 const seedQuestions = () => Question.bulkCreate(questionData);
 
 module.exports = seedQuestions;

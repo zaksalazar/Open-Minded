@@ -1,17 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config');
 
 class Question extends Model {}
 
 Question.init(
   {
-    question_id: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    question:{
-      types: DataTypes.TEXT
+    topic: {
+      type: DataTypes.STRING
     }
   },
   {
