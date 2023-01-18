@@ -12,7 +12,7 @@ Question.init(
     },
     topic: {
       type: DataTypes.STRING
-    }
+    },
   },
   {
     sequelize,
