@@ -1,21 +1,30 @@
+<body> 
+  <div>
+    <p id='question'> {{question.topic}} </p>
+  </div>
+</body>
 
+<style>
 
-<div> 
-  <p id='question'> {{question.quesion}} </p>
-</div>
-
-<script> 
-  const topic = fetch ('/questions')
-    method: 'GET'
-    headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        question: document.querySelector('#question').value,
-      })
-    if (response.ok) {
-    //document.location.replace('/dashboard'); 
-  } else {
-    alert('Failed to post');
+  body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url('https://www.regionalneurological.com/wp-content/uploads/2020/03/Regional-Neurological_Brain-Science.jpeg'); 
+    height: 100vh; 
   }
-</script>
+   #question {
+    line-height: 50px;
+    margin-top: 400;
+    font-size: 50px;
+    font-weight: bold;
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+</style>
