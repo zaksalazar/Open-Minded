@@ -1,7 +1,7 @@
 {
   "name": "open-minded",
   "version": "1.0.0",
-  "description": "",
+  "description": "A place where 2 random people can speak about their thoughts/beliefs about a randomized topic for a specified amount of time. \r The motivation for this project is our view that many discussions on contended topics are not done a respectful way. We wanted a place where 2 people can come together to share their point of view on a topic outside of an echo chamber or in an argumentative setting. Our hope is that the personal video setting, time limit, and randomized topics will encourage people will help people to share their point of view in an honest and civil manner.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
