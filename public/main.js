@@ -4,6 +4,7 @@ const TOKEN =
   '007eJxTYGju5ZPkW6z45vf27w8FO3d9ePJruVDnDLl53+VmHNxjsXWeAkNakkVKskVqaqJlirmJUXKSpaFJirGFaXKyuYWFmUVa4qvDF5IbAhkZNhwRZ2VkgEAQn4UhKjHbiIEBAEN8Iw4=';
 const CHANNEL = 'OM1.17.23';
 
+
 const client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' });
 
 let localTracks = [];
