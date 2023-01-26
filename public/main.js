@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-const APP_ID = 'fb8dc8eea9d742cb914d385cc78868fa';
+const APP_ID = '1112e7c69dad4d3e9dd127f0305f576c';
 const TOKEN =
-  '007eJxTYGju5ZPkW6z45vf27w8FO3d9ePJruVDnDLl53+VmHNxjsXWeAkNakkVKskVqaqJlirmJUXKSpaFJirGFaXKyuYWFmUVa4qvDF5IbAhkZNhwRZ2VkgEAQn4UhKjHbiIEBAEN8Iw4=';
-const CHANNEL = 'OM1.17.23';
+  '007eJxTYFiUFyOdNdOa5+w62x23C6XCv2U/b+L73cl39WLoFc17tW4KDIaGhkap5slmlimJKSYpxqmWKSmGRuZpBsYGpmmm5mbJ1a6XkhsCGRleii1lYmSAQBCfiyG/IDUvNzMvJTWFgQEAMckicg==';
+const CHANNEL = 'openminded';
 
 
 const client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' });
@@ -61,6 +61,29 @@ let handleUserJoined = async (user, mediaType) => {
     user.audioTrack.play();
   }
 };
+
+const startingMinutes = 3;
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById("countdown");
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+  countdownEl.innerHTML = (`${minutes} ${seconds};`)
+  time--;
+}
+
+setInterval("location.reload(true)", 300000);
+
+setTimeout(function(){
+  window.location.reload();
+}, 180000);
 
 let handleUserLeft = async (user) => {
   delete remoteUsers[user.uid];
