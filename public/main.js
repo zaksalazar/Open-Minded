@@ -1,23 +1,29 @@
 /* eslint-disable no-undef */
-APP_ID = 'bf40d015248642e098d424efd737eef8';
+const APP_ID = '8373f2c098bf42b6ac1e19608feee57b';
 // const TOKEN =
 //   '007eJxTYFjRaxBkO0v+x9QXqVav42f/f/j33YuabUwffj5/eW3JpMBGBYakNBODFANDUyMTCzMTo1QDS4sUEyOT1LQUc2Pz1NQ0i8OvLiU3BDIyfHRpZmRkgEAQn40huCSxJDOZgQEADcIlsg==';
-const CHANNEL = 'Static';
-const tokenServerBaseUrl = 'https://openmind-token-server.herokuapp.com/';
+const CHANNEL = 'GroupChat';
+const tokenServerBaseUrl = 'http://localhost:8080/access-token';
 
-const client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' });
+const client = AgoraRTC.createClient({
+  mode: 'rtc',
+  role: 'host',
+  codec: 'vp8'
+});
 
 let localTracks = [];
 let remoteUsers = {};
 
 async function getTokenFromTokenServer(channelName, role, uid) {
   const url = `${tokenServerBaseUrl}?channelName=${channelName}&role=${role}&uid=${uid}`;
-  console.log(url, 'url');
-  const res = await fetch(url);
-  const json = await res.json();
-
-  const { token } = json;
-  return token;
+  try {
+    const res = await fetch(url);
+    const json = await res.json();
+    const { token } = json;
+    return token;
+  } catch (e) {
+    console.log(e, 'error');
+  }
 }
 
 let joinAndDisplayLocalStream = async () => {
@@ -30,7 +36,8 @@ let joinAndDisplayLocalStream = async () => {
   let token = await getTokenFromTokenServer(CHANNEL, 'publisher', '123');
   console.log(token, CHANNEL, APP_ID);
 
-  let UID = await client.join(APP_ID, CHANNEL, token, null);
+  let UID = await client.join(APP_ID, CHANNEL, null, null);
+  console.log(UID);
 
   localTracks = await AgoraRTC.createMicrophoneAndCameraTracks();
 
@@ -46,7 +53,9 @@ let joinAndDisplayLocalStream = async () => {
 
   await client.publish([localTracks[0], localTracks[1]]);
 };
+
 const joinStream = async () => {
+  console.log(client, 'client');
   await joinAndDisplayLocalStream();
   document.getElementById('join-btn').style.display = 'none';
   document.getElementById('stream-controls').style.display = 'flex';

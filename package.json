@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/zaksalazar/Open-Minded#readme",
   "dependencies": {
+    "agora-rtc-sdk": "^2.4.0",
     "agora-rtc-sdk-ng": "^4.16.0",
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
