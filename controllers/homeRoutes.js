@@ -28,4 +28,9 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/categories', (req, res) => {
+  res.render('categories');
+});
+
+
 module.exports = router;
