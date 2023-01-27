@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-const APP_ID = 'acef1c09adba4e399f202d9df43ef80c';
+const APP_ID = 'fb8dc8eea9d742cb914d385cc78868fa';
 const TOKEN =
-  '007eJxTYPjMYOUabdTNe2ej/IXTgnekelepMffv/huxldM3smgFa6gCQ2JyapphsoFlYkpSokmqsaVlmpGBUYplSpqJcWqahUGy3aYLyQ2BjAxFCx8yMzJAIIjPzBCVmM3AAADUqx6Y';
-const CHANNEL = 'Zak';
+  '007eJxTYGju5ZPkW6z45vf27w8FO3d9ePJruVDnDLl53+VmHNxjsXWeAkNakkVKskVqaqJlirmJUXKSpaFJirGFaXKyuYWFmUVa4qvDF5IbAhkZNhwRZ2VkgEAQn4UhKjHbiIEBAEN8Iw4=';
+const CHANNEL = 'Zak2';
 
 const client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' });
 
