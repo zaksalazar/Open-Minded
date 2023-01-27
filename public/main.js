@@ -35,6 +35,28 @@ const joinStream = async () => {
   await joinAndDisplayLocalStream();
   document.getElementById('join-btn').style.display = 'none';
   document.getElementById('stream-controls').style.display = 'flex';
+  const startingMinutes = 3;
+  let time = startingMinutes * 60;
+  
+  const countdownEl = document.getElementById("countdown");
+  
+  setInterval(updateCountdown, 1000);
+  
+  function updateCountdown() {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+  
+    seconds = seconds < 10 ? "0" + seconds : seconds
+  
+    countdownEl.innerHTML = (`${minutes} ${seconds}`);
+    time--
+  }
+  
+  setInterval("location.reload(true)", 300000);
+  
+  setTimeout(function(){
+    window.location.reload();
+  }, 180000);
 };
 
 let handleUserJoined = async (user, mediaType) => {
@@ -61,29 +83,6 @@ let handleUserJoined = async (user, mediaType) => {
     user.audioTrack.play();
   }
 };
-
-const startingMinutes = 3;
-let time = startingMinutes * 60;
-
-const countdownEl = document.getElementById("countdown");
-
-setInterval(updateCountdown, 1000);
-
-function updateCountdown() {
-  const minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-
-  countdownEl.innerHTML = (`${minutes} ${seconds};`)
-  time--;
-}
-
-setInterval("location.reload(true)", 300000);
-
-setTimeout(function(){
-  window.location.reload();
-}, 180000);
 
 let handleUserLeft = async (user) => {
   delete remoteUsers[user.uid];
