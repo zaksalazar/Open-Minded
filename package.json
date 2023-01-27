@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "lint": "npx eslint \"**/*.js\"",
     "lint:fix": "eslint \"**/*.js\" --fix",
-    "format": "npx prettier **/* -w --ignore-unknown"
+    "format": "npx prettier **/* -w --ignore-unknown",
+    "heroku-postbuild": "npm run seed"
   },
   "repository": {
     "type": "git",
