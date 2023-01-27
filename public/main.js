@@ -1,20 +1,36 @@
 /* eslint-disable no-undef */
-const APP_ID = 'acef1c09adba4e399f202d9df43ef80c';
-const TOKEN =
-  '007eJxTYHASOiOhHX78oanYhqyzFW/fXm3b8WDu6r2rM5XWBG14w5qnwJCYnJpmmGxgmZiSlGiSamxpmWZkYJRimZJmYpyaZmGQ3Lb9QnJDICOD9B0zVkYGCATxWRiiErOzGRgA9CUh8Q==';
-const CHANNEL = 'Zakk';
+APP_ID = 'bf40d015248642e098d424efd737eef8';
+// const TOKEN =
+//   '007eJxTYFjRaxBkO0v+x9QXqVav42f/f/j33YuabUwffj5/eW3JpMBGBYakNBODFANDUyMTCzMTo1QDS4sUEyOT1LQUc2Pz1NQ0i8OvLiU3BDIyfHRpZmRkgEAQn40huCSxJDOZgQEADcIlsg==';
+const CHANNEL = 'Static';
+const tokenServerBaseUrl = 'https://openmind-token-server.herokuapp.com/';
 
 const client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' });
 
 let localTracks = [];
 let remoteUsers = {};
 
+async function getTokenFromTokenServer(channelName, role, uid) {
+  const url = `${tokenServerBaseUrl}?channelName=${channelName}&role=${role}&uid=${uid}`;
+  console.log(url, 'url');
+  const res = await fetch(url);
+  const json = await res.json();
+
+  const { token } = json;
+  return token;
+}
+
 let joinAndDisplayLocalStream = async () => {
   client.on('user-published', handleUserJoined);
 
   client.on('user-left', handleUserLeft);
 
-  let UID = await client.join(APP_ID, CHANNEL, TOKEN, null);
+  // call your node token server to generate token
+
+  let token = await getTokenFromTokenServer(CHANNEL, 'publisher', '123');
+  console.log(token, CHANNEL, APP_ID);
+
+  let UID = await client.join(APP_ID, CHANNEL, token, null);
 
   localTracks = await AgoraRTC.createMicrophoneAndCameraTracks();
 

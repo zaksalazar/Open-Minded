@@ -50,3 +50,5 @@ sequelize.sync({ force: false }).then(() => {
   });
 });
 //turn on connection to db and server
+
+// add logic for AgoraTokenServer
