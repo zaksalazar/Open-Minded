@@ -19,7 +19,7 @@ async function signIn() {
   });
 
   if (response.ok) {
-    document.location.replace('/questions/rand');
+    document.location.replace('/categories');
   } else {
     alert('Failed to login');
   }
