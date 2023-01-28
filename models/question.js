@@ -13,6 +13,14 @@ Question.init(
     topic: {
       type: DataTypes.STRING
     },
+    category_id: {
+      type: DataTypes.INTEGER,
+      //References the `Category` model's `id`.
+      references: {
+        model: 'category',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,

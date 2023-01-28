@@ -1,15 +1,14 @@
-
 <body> 
-
   <div>
-    <p id='question'> {{question.topic}} </p>
-    <p id="countdown"></p>
-    <p id="countdown"></p>
+    <h2> What would you like to discuss?</h2>
+    <a href='/questions/rand?id=1' id="join-btn">Politics</a>
+    <a href='/questions/rand?id=2' id="join-btn">Culture</a>
+    <a href='/questions/rand?id=3' id="join-btn">Music</a>
+    <a href= '/questions/rand?id=4'id="join-btn">Current Events</a>
   </div>
 </body>
 
 <style>
-
   body {
     margin: 0;
     padding: 0;
@@ -41,4 +40,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+    button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 18px;
+    padding: 20px 40px;
+    box-shadow: 0 0 50px 15px #48abe0;
+    color: black; 
+    }
 </style>
