@@ -5,12 +5,13 @@ const { Sequelize } = require('sequelize');
 const Question = require('../models/question');
 
 //GET route to pull random question from questions table// '/questions/rand?ID'
-router.get('/rand', async (req, res) => {
+router.get('/rand?id', async (req, res) => {
+  // const category_id = req.params.id;
   try {
-    const questionData = await Question.findAll({
+    const questionData = await Question.findOne({
       order: Sequelize.literal('rand()'),
-      limit: 1
-      //where: category_id = req.query.id
+      limit: 1,
+      where: {category_id: req.query.id}
     });
     const question = questionData[0].get({ plain: true });
     res.render('homepage', { question });
@@ -28,4 +29,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+// route to recieve a random question
+router.get('/rand', async (req, res) => {
+  // const category_id = req.params.id;
+  try {
+    const questionData = await Question.findAll({
+      order: Sequelize.literal('rand()'),
+      limit: 1,
+    });
+    const question = questionData[0].get({ plain: true });
+    res.render('homepage', { question });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

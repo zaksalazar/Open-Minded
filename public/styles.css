@@ -57,3 +57,21 @@ button {
     width: 95%;
   }
 }
+  a.btn.btn-primary {
+    color: orangered;
+    font-size: 15px;
+    box-shadow: 0 0 50px 15px #48abe0;
+}
+h5.card-header {
+  line-height: 50px;
+  margin-top: 400;
+  font-size: 50px;
+  font-weight: bold;
+  background: #121FCF;
+  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card {
+  display: contents;
+}

@@ -1,11 +1,30 @@
 <body> 
-  <div>
+  <div class="card">
+  <h5 class="card-header">What Would You Like To Discuss?</h5>
+  <div class="card-body">
+    <a href="/questions/rand?id=1" class="btn btn-primary">Politics</a>
+    
+    <a href="/questions/rand?id=2" class="btn btn-primary text-orange bg-dark">Culture</a>
+    
+    <a href="/questions/rand?id=3" class="btn btn-primary">Music</a>
+    
+    <a href="/questions/rand?id=4" class="btn btn-primary">Current Events</a>
+
+    <a href="/questions/rand" class="btn btn-primary">Random</a>
+    
+  </div>
+</div>
+  {{!-- <div>
     <h2> What would you like to discuss?</h2>
     <a href='/questions/rand?id=1' id="join-btn">Politics</a>
+    <br>
     <a href='/questions/rand?id=2' id="join-btn">Culture</a>
+    <br>
     <a href='/questions/rand?id=3' id="join-btn">Music</a>
+    <br>
     <a href= '/questions/rand?id=4'id="join-btn">Current Events</a>
-  </div>
+    <br> 
+  </div> --}}
 </body>
 
 <style>
@@ -50,5 +69,10 @@
     padding: 20px 40px;
     box-shadow: 0 0 50px 15px #48abe0;
     color: black; 
+    }
+
+    .btn btn-primary {
+      color:#CF1512;
+      font-size: larger;
     }
 </style>

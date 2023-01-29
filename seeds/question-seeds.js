@@ -3,23 +3,19 @@ const { Question } = require('../models');
 const questionData = [
   {
     topic: 'Should America have free healthcare?',
-    category_id: 1,
-  },
-  {
-    topic: 'Was the 2020 election stollen?',
-    category_id: 1,
+    category_id: 1
   },
   {
     topic: 'Do you believe in God?',
-    category_id: 2,
-  },
-  {
-    topic: 'Pro vax or no vax?',
-    category_id: 2,
+    category_id: 2
   },
   {
     topic: 'Stones or Beatles?',
-    category_id: 3,
+    category_id: 3
+  },
+  {
+    topic: 'What can be done to prevent mass shootings?',
+    category_id: 4
   }
 ];
 console.log(Question);
