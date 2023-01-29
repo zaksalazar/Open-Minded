@@ -49,6 +49,7 @@ a.btn.btn-primary {
     border-radius: 5px;
     font-size: -webkit-xx-large;
     padding: 10px;
+    font-weight: bold;
 }
 h5.card-header {
   line-height: 50px;
