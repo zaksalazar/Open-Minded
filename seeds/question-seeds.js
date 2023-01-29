@@ -14,6 +14,15 @@ const questionData = [
     category_id: 3
   },
   {
+    topic: 'Who is the greatest front man of all time?',
+    category_id: 3
+  },
+  {
+    topic: 'Who is the greatest guitar player of all time?',
+    category_id: 3
+  },
+
+  {
     topic: 'What can be done to prevent mass shootings?',
     category_id: 4
   }
