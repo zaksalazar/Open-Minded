@@ -38,15 +38,22 @@ video {
 .answerButton {
   border-radius: 20px;
 }
-  a.btn.btn-primary {
+ 
+element.style {
+}
+a.btn.btn-primary {
     color: orangered;
-    font-size: 15px;
+    font-size: 25px;
     box-shadow: 0 0 50px 15px #48abe0;
+    background-color: aquamarine;
+    border-radius: 5px;
+    font-size: -webkit-xx-large;
+    padding: 10px;
 }
 h5.card-header {
   line-height: 50px;
   margin-top: 400;
-  font-size: 50px;
+  font-size: -webkit-xxx-large;
   font-weight: bold;
   background: #121FCF;
   background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
@@ -55,4 +62,9 @@ h5.card-header {
 }
 .card {
   display: contents;
+}
+.intro {
+  font-size: xx-large;
+  font-weight: bold;
+  color:black
 }
