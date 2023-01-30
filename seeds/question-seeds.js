@@ -25,7 +25,11 @@ const questionData = [
   {
     topic: 'What can be done to prevent mass shootings?',
     category_id: 4
-  }
+  },
+  {
+    topic: 'What is on Chads hat in his Github profile Pic?',
+    category_id: 5
+  },
 ];
 console.log(Question);
 const seedQuestions = () => Question.bulkCreate(questionData);
