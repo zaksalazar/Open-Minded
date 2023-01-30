@@ -13,6 +13,9 @@ const categoryData = [
   {
     category_name: 'Current Events',
   },
+  {
+    category_name: 'Demo',
+  },
 ];
 
 const seedCategories = () => Category.bulkCreate(categoryData);
