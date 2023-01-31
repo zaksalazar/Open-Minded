@@ -6,7 +6,11 @@
 }
 
 body {
-	background: #f6f5f7;
+  	background-image: url('https://www.regionalneurological.com/wp-content/uploads/2020/03/Regional-Neurological_Brain-Science.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
