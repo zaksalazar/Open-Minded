@@ -15,7 +15,7 @@ The motivation for this project is our view that many discussions on contended t
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Go to https://open-minded.herokuapp.com/ and follow the prompts. Beginning with Sign Up.
 
 ## Usage
 
@@ -25,8 +25,10 @@ Create an account using the sign up side of the homepage.
 ![create account page](public/assets/images/create%20account.png)
 Using the sign in side of the homepage, enter your information.
 ![sign in page](public/assets/images/sign%20in.png)
-The next screen will have a prompt for your next conversation. Click the Join Call button to start.
-![join call page](public/assets/images/join.png)
+The next screen will have a list of categories for discussion. Click the desired category button to start.
+![join call page](public/assets/images/categories.png)
+You will then be routed to the call screen. This is where you can turn on your webcam and commence your discussion.
+![join call page](public/assets/images/call.png)
 
 ## Credits
 
@@ -54,9 +56,3 @@ INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
 LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
-
----
-
-## Features
-
-If your project has a lot of features, list them here.
