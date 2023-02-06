@@ -2,31 +2,32 @@
 
 ## Description
 
-A place where 2 random people can speak about their thoughts/beliefs about a randomized topic for a specified amount of time. 
+A place where 2 random people can speak about their thoughts/beliefs about a randomized topic for a specified amount of time.
 The motivation for this project is our view that many discussions on contended topics are not done a respectful way. We wanted a place where 2 people can come together to share their point of view on a topic outside of an echo chamber or in an argumentative setting. Our hope is that the personal video setting, time limit, and randomized topics will encourage people will help people to share their point of view in an honest and civil manner.
 
-## Table of Contents 
+## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
+- [Getting Started](#getting-started)
 - [Credits](#credits)
 - [License](#license)
 - [Features](#features)
 
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
-
-## Usage
+## Getting Started
 
 Provide instructions and examples for use. Include screenshots as needed.
 
 Create an account using the sign up side of the homepage.
 ![create account page](public/assets/images/create%20account.png)
-Using the sign in side of the homepage, enter your information.
-![sign in page](public/assets/images/sign%20in.png)
-The next screen will have a prompt for your next conversation. Click the Join Call button to start.
-![join call page](public/assets/images/join.png)
+
+User 1 will select a category to discuss and be prompted with a question. User 1 must click the 'Start WebCam" button, followed by the "Create Call (Offer) button. This will generate a unique room toke which may be shared with a second user.
+
+User 2 must login to the application and then:
+
+- paste unique token into the answer field.
+- turn on webcam
+- click join call
+
+Once both users are connected they may begin their conversation.
 
 ## Credits
 
